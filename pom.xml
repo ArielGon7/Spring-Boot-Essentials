@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.devari</groupId>
-	<artifactId>spring-boot-essentials</artifactId>
+	<artifactId>spring-boot-essentials-JPA</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name/>
 	<description/>
