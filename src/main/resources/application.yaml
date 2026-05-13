@@ -1,3 +1,19 @@
 spring:
   application:
     name: spring-boot-essentials-JPA
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/gym?createbataBaseIfNotExist=true
+    username: root
+    password: admin123
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+
+
