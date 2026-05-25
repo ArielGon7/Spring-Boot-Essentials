@@ -2,6 +2,7 @@ package com.devari.spring_boot_essentials.service;
 
 import com.devari.spring_boot_essentials.database.model.ExerciciosEntity;
 import com.devari.spring_boot_essentials.database.repository.IExerciciosRepository;
+import com.devari.spring_boot_essentials.dto.ExercicioDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +16,13 @@ public class ExerciciosService {
 
     public List<ExerciciosEntity> findAll(){
         return iExerciciosRepository.findAll();
+    }
+
+    public void save(ExercicioDto exercicioDto){
+        iExerciciosRepository.save(ExerciciosEntity.builder()
+                        .name(exercicioDto.getName())
+                        .grupoMuscular(exercicioDto.getGrupoMuscular())
+                .build());
     }
 
 }
