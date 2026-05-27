@@ -25,4 +25,8 @@ public class ExerciciosService {
                 .build());
     }
 
+    public List<ExerciciosEntity> getExercicioByGrupoMuscular(String grupoMusucular){
+        return iExerciciosRepository.findAllByGrupoMusucular(grupoMusucular);
+    }
+
 }

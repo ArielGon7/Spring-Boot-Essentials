@@ -32,4 +32,11 @@ public class ExercicioController {
         exerciciosService.save(exercicioDto);
     }
 
+    @GetMapping("/grupo/{grupoMuscular}")
+    @ResponseStatus(HttpStatus.OK)
+    public List<ExerciciosEntity> findAllByGrupoMuscular(@PathVariable String grupoMuscular){
+        return exerciciosService.getExercicioByGrupoMuscular(grupoMuscular);
+    }
+
+
 }
