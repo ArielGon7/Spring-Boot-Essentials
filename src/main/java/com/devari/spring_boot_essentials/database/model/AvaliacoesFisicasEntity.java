@@ -23,8 +23,8 @@ public class AvaliacoesFisicasEntity {
     @Column(nullable = false)
     private BigDecimal altura;
 
-    @Column(name = "percentual_gordura")
-    private BigDecimal percentualGordura;
+    @Column(name = "percentual_gordura", nullable = false)
+    private BigDecimal percentualGorduraCorporal;
 
 
 }

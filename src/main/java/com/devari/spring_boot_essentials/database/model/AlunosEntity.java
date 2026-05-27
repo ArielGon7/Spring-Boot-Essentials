@@ -9,7 +9,8 @@ import java.util.Set;
 
 @Entity
 @Table(name = "alunos")
-@Getter@Setter
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
@@ -27,7 +28,7 @@ public class AlunosEntity {
 
     @OneToOne
     @JoinColumn(name = "avaliacao_fisica_id")
-    private AvaliacoesFisicasEntity avaliacoesFisicasEntity;
+    private AvaliacoesFisicasEntity avaliacoesFisicas;
 
     @OneToMany(mappedBy = "aluno")
     private Set<TreinosEntity> treinos = new HashSet<>();
