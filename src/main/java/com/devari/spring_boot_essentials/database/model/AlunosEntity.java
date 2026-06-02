@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.math.BigDecimal;
+import java.net.Proxy;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -26,7 +27,7 @@ public class AlunosEntity {
     @Column(nullable = false, unique = true)
     private String email;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "avaliacao_fisica_id")
     private AvaliacoesFisicasEntity avaliacoesFisicas;
 
